@@ -50,6 +50,15 @@
             }
         }
     }
+    .container-principal{
+        .container-services{
+            .tarjeta-inicio{
+                p{
+                    font-size: 1.8rem
+                }
+            }
+        }
+    }
     /*video mas grande*/
     iframe{
         width: 800px;
@@ -76,28 +85,6 @@
                 margin-top: 20px;
             }
         }
-        .navbar{
-            .collapse{
-                .btn-personal{
-                    background-color: $color-principal;
-                    color: $color-enlaces;
-                    padding: 10pc 25px;
-                    border-radius: 50px;
-                    font-weight: 600;
-                    text-decoration: none;
-                    display: inline-block;
-                    border: 2px solid $color-subrayado;
-                    transition: all 0.3s ease;
-                    line-height: 1;
-                    &:hover{
-                        background-color: $color-subrayado;
-                        color: $color-principal;
-                        transform: translateY(-1px);
-                        box-shadow: 0 4px rgba(0, 0, 0, 0.1);
-                    }
-                }
-            }
-        } 
     }
     /*color de footer*/
     footer{
@@ -137,6 +124,20 @@
         }
         .nav-personal{
             grid-area: nav;
+            background-color: $color-secundario;
+            margin-left: 100px;
+            .desplegable{
+                .content-desplegable{
+                    background-color: $color-principal;
+                    & li{
+                        & a{
+                            &:hover{
+                                background-color: $color-secundario;
+                            }
+                        }   
+                    }
+                }
+            }
         }
         .hero-personal{
             grid-area: titulo;

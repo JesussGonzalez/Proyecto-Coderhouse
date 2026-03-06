@@ -547,6 +547,11 @@ iframe {
   .nav-personal {
     grid-area: nav;
   }
+  .nav-personal {
+    background-color: #eec1e3;
+    padding: 15px 30px 0 0;
+    margin-left: 50px;
+  }
   .nav-personal ul {
     list-style: none;
     display: flex;
@@ -645,6 +650,9 @@ iframe {
   .container-principal .container-services .section-list {
     grid-area: 1/1/1/span 3;
   }
+  .container-principal .container-services .tarjeta-inicio p {
+    font-size: 1.8rem;
+  }
   /*video mas grande*/
   iframe {
     width: 800px;
@@ -668,24 +676,6 @@ iframe {
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     margin-top: 20px;
-  }
-  .container-personal .navbar .collapse .btn-personal {
-    background-color: #eec1e3;
-    color: rgb(10, 10, 173);
-    padding: 10pc 25px;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    border: 2px solid rgb(100, 100, 204);
-    transition: all 0.3s ease;
-    line-height: 1;
-  }
-  .container-personal .navbar .collapse .btn-personal:hover {
-    background-color: rgb(100, 100, 204);
-    color: #eec1e3;
-    transform: translateY(-1px);
-    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
   }
   /*color de footer*/
   footer {
@@ -719,6 +709,14 @@ iframe {
   }
   .container-personal .nav-personal {
     grid-area: nav;
+    background-color: #c29ffa;
+    margin-left: 100px;
+  }
+  .container-personal .nav-personal .desplegable .content-desplegable {
+    background-color: #eec1e3;
+  }
+  .container-personal .nav-personal .desplegable .content-desplegable li a:hover {
+    background-color: #c29ffa;
   }
   .container-personal .hero-personal {
     grid-area: titulo;
