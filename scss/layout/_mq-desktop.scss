@@ -1,0 +1,151 @@
+@use "../utilities/variables" as *;
+
+@use "../utilities/mixin" as *;
+/*archivo mq-desktop*/
+/*estilos de desktop*/
+/*cambio de color principal*/
+@media (min-width: 1200px){
+    body{
+        background-color: $color-principal;
+    }
+    /*color del menu de navegacion*/
+    header{
+        .navbar{
+            background-color: $color-secundario;
+        }
+    }
+    .container-principal{
+        background-color: $color-secundario;    
+        .container-services{
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            align-self: start;
+            .titulo-servicio{
+                grid-area: 1/2/1/4;
+            }
+            .imagenes-principal{
+                .no-desktop{
+                    display: none;
+                }
+            }    
+            .imagenes-principal, .imagenes-pages{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-area: 2/3/5/span 2;
+                gap: 15px;
+                align-self: start;
+                & img{
+                    width: 100%;
+                    height: 400px;
+                    @include bloque;
+                }
+            }
+            .tarjeta{
+                grid-area: 2/1/2/span 2;
+            }
+            .section-list{
+                grid-area: 1/1/1/span 3;
+            }
+        }
+    }
+    /*video mas grande*/
+    iframe{
+        width: 800px;
+    }
+    /*estilos grilla*/
+    .container-personal {
+    grid-template-columns: 200px repeat(4, 1fr);
+    grid-template-areas:
+     "header header header header header"
+     " nav  titulo titulo titulo titulo"
+     " nav   hero   hero   hero    hero";
+        .content-personal{
+            grid-area: header;
+        }
+        .nav-personal{
+            grid-area: nav;
+        }
+        .hero-personal{
+            grid-area: titulo;
+            .producto-personal{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 25px;
+                margin-top: 20px;
+            }
+        }
+        .navbar{
+            .collapse{
+                .btn-personal{
+                    background-color: $color-principal;
+                    color: $color-enlaces;
+                    padding: 10pc 25px;
+                    border-radius: 50px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    display: inline-block;
+                    border: 2px solid $color-subrayado;
+                    transition: all 0.3s ease;
+                    line-height: 1;
+                    &:hover{
+                        background-color: $color-subrayado;
+                        color: $color-principal;
+                        transform: translateY(-1px);
+                        box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+        } 
+    }
+    /*color de footer*/
+    footer{
+        background-color: $color-secundario;
+    }
+    /*estilos layout en grilla*/
+    .container-personal {
+        grid-template-columns: 200px repeat(4, 1fr);
+        grid-template-areas:
+         "header header header header header"
+         " nav  titulo titulo titulo titulo"
+         " nav   hero   hero   hero    hero";
+        .content-personal{
+            grid-area: header;
+            .navbar{
+                .collapse{
+                    .btn-personal{
+                        background-color: $color-principal;
+                        color: $color-enlaces;
+                        padding: 10px 25px ;
+                        border-radius: 50px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        display: inline-block;
+                        border: 2px solid $color-subrayado;
+                        transition: all 0.3s ease;
+                        line-height: 1;
+                        &:hover{
+                            background-color: $color-subrayado;
+                            color: $color-principal;
+                            transform: translateY(-1px);
+                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+        .nav-personal{
+            grid-area: nav;
+        }
+        .hero-personal{
+            grid-area: titulo;
+            .producto-personal{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 25px;
+                margin-top: 20px;
+            }
+        } 
+    }
+}            

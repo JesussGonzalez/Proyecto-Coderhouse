@@ -1,0 +1,50 @@
+@use "../utilities/variables" as *;
+
+@use "../utilities/mixin" as *;
+/*archivo page-secundary*/
+/*estilos de las paginas secundarias*/
+
+.imagenes-pages{
+    display: contents;
+    .imagen-inicio{
+        order: 1;
+        @include imagen-articulos;
+    }
+    .imagen-final{
+        order: 3;
+        @include imagen-articulos;
+    }
+}
+.texto-articulo{
+    order: 2;
+    p{
+        span{
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: $color-hover;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: justify;
+            @include bloque;
+        }
+    }
+}
+/*se agrega menu en el footer*/
+.footer-services-list{
+    list-style: none;
+    padding: 0;
+    li{
+        margin: 10px 0;
+        a{
+            text-decoration: none;
+            font-weight: 500;
+            &:hover{
+                color: $color-hover;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+
+

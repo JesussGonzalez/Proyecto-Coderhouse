@@ -1,0 +1,78 @@
+@use "../utilities/variables" as *;
+
+@use "../utilities/mixin" as *;
+/*archivo de page-producto*/
+/*estilos de la pagina productos artesanales*/
+
+.container-personal{
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-areas: "header" "titulo" "hero";
+}
+
+.hero-personal{
+    grid-area: titulo;
+    text-align: start;
+    background-color: $color-secundario;
+    padding: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+    .tarjeta{
+        font-size: 1.4em;
+        color: $color-enlaces;
+        margin-bottom: 20px;
+        font-family: $fuente-principal;
+        position: relative;
+        font-weight: bold;
+        @include bloque;
+        &::after{
+            @include subrayado;
+        }
+    }
+}    
+.producto-personal{
+    @include grilla-imagen;
+    gap: 25px;
+    margin-top: 20px;
+    a{
+        text-decoration: none;
+        color: inherit;
+        @include flex-column;
+        align-items: center;
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: translateY(-5px);
+            img{
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            }
+        }
+        & img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        & span{
+            font-size: 1.1rem;
+            line-height: 1.2;
+            color: $color-hover;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            @include texto-centrado;
+            @include bloque;
+            span{
+                font-size: 1rem;
+                line-height: 1;
+                color: $color-hover;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                @include texto-centrado;
+                @include bloque;
+            }
+        }
+    }
+}
+
+

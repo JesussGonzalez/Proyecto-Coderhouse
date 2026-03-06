@@ -1,0 +1,89 @@
+@use "../utilities/variables" as *;
+
+@use "../utilities/mixin" as *;
+/*archivo de main*/
+/*estilos general de main*/
+
+.container-principal{
+    background-color: $color-secundario;
+    .container-services{
+        @include flex-column;
+        gap: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 10px;
+        .tarjeta{
+            order: 1;
+        }
+        .imagenes-principal{
+            order: 2;
+        }
+        h2, h3{
+            color: $color-enlaces;
+            margin-bottom: 20px;
+            font-family: $fuente-principal;
+            position: relative;
+            font-weight: bold;
+            @include bloque;
+        }
+        p{
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: $color-texto;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+        summary{
+            list-style: none;
+            color: $color-summary;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-top: 10px;
+            outline: none;
+            &::after{
+                content: " + ";
+            }            
+        }
+        & [open]{
+            summary::after{
+                content: " - ";
+            }
+            summary{
+                margin-bottom: 25px;
+            }
+        }
+        h2::after, h3::after{
+            @include subrayado;
+        }
+        .imagenes-principal{
+            @include grilla-imagen;
+            gap: 15px;
+            margin-bottom: 40px;
+            img{
+                @include imagen;
+                object-fit: cover;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }            
+        }
+        .section-list{
+            background-color: transparent;
+            padding: 20px;
+            margin: 0 auto;
+        }
+    }
+}
+.tarjeta{
+    background-color: $color-tarjeta;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid $color-hover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.division{
+    margin: 20px;
+}
+

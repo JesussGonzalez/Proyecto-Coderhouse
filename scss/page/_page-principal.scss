@@ -1,0 +1,11 @@
+@use "../utilities/variables" as *;
+
+@use "../utilities/mixin" as *;
+/*archivo de page-principal*/
+/*estilos del body general*/
+
+body{
+	font-family: $fuente-principal;
+	line-height: 1.6;
+	background-color: $color-principal;
+}

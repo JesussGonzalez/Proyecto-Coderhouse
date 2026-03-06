@@ -1,0 +1,22 @@
+@use "../utilities/variables" as *;
+
+@use "../utilities/mixin" as *;
+/*archivo de imagen*/
+/*estilos de posicion de las imagenes*/
+
+.focus-1{
+    object-position: 90%;
+}
+.focus-2{
+    object-position: 0% 0.1%;
+}
+.focus-3{
+    object-position: 0% 30%;
+}
+.focus-4{
+    object-position: 0 90%;
+}
+
+aside img:hover{
+    transform: scale(1.03);
+}
