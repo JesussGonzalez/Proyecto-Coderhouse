@@ -144,6 +144,7 @@
         }
         .hero-personal{
             grid-area: titulo;
+            background-color: $color-secundario;
             .producto-personal{
                 display: grid;
                 grid-template-columns: repeat(4,1fr);

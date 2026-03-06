@@ -547,6 +547,9 @@ iframe {
   .content-personal {
     grid-area: header;
   }
+  .hero-personal {
+    background-color: #eec1e3;
+  }
   .nav-personal {
     grid-area: nav;
   }
@@ -726,6 +729,7 @@ iframe {
   }
   .container-personal .hero-personal {
     grid-area: titulo;
+    background-color: #c29ffa;
   }
   .container-personal .hero-personal .producto-personal {
     display: grid;

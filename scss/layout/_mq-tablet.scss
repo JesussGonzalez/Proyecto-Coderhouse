@@ -127,6 +127,9 @@
     .content-personal{
         grid-area: header;
     }
+    .hero-personal{
+        background-color: $color-principal;
+    }
 
     .nav-personal{
         grid-area: nav;
