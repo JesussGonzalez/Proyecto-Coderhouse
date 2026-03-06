@@ -438,6 +438,9 @@ iframe {
   header .navbar {
     background-color: #eec1e3;
   }
+  header .navbar .btn-personal {
+    background-color: #c29ffa;
+  }
   header .logo-principal {
     display: block;
     width: 150px;
@@ -615,6 +618,9 @@ iframe {
   /*color del menu de navegacion*/
   header .navbar {
     background-color: #c29ffa;
+  }
+  header .navbar .btn-personal {
+    background-color: #eec1e3;
   }
   .container-principal {
     background-color: #c29ffa;

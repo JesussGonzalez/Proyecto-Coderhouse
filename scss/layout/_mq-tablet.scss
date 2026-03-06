@@ -11,6 +11,9 @@
     header {
         .navbar{
             background-color: $color-principal;
+            .btn-personal{
+                background-color: $color-secundario;
+            }
         }
         .logo-principal {
             @include bloque;

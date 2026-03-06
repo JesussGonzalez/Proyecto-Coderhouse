@@ -12,6 +12,9 @@
     header{
         .navbar{
             background-color: $color-secundario;
+            .btn-personal{
+                background-color: $color-principal;
+            }
         }
     }
     .container-principal{
